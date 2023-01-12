@@ -1,0 +1,28 @@
+# product/board stuff
+ro.build.product=m10lte
+ro.product.device=m10lte
+ro.product.name=m10ltedd
+ro.product.brand=samsung
+ro.product.board=exynos7870
+ro.board.platform=universal7870
+ro.hardware=samsungexynos7870
+ro.hardware.chipname=exynos7870
+ro.arch=exynos7870
+
+# USB and MTP stuff
+persist.sys.usb.config=mtp,adb
+sys.usb.controller=13600000.dwc3
+
+# Treble support
+ro.treble.enabled=true
+
+# Encryption
+ro.crypto.fde_algorithm=AES-256-XTS-DISK
+ro.crypto.fs_crypto_blkdev=/dev/block/dm-3
+ro.crypto.fuse_sdcard=true
+ro.crypto.state=encrypted
+ro.crypto.type=block
+ro.adb.secure=0
+
+# Gatekeeper
+vendor.gatekeeper.disable_spu=true
