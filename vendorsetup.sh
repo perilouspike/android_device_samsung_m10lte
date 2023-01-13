@@ -81,7 +81,7 @@ if [ "$1" = "$FDEVICE" -o "$FOX_BUILD_DEVICE" = "$FDEVICE" ]; then
         # Disable checking for compatibility.zip in ROMs
 	export OF_NO_TREBLE_COMPATIBILITY_CHECK="1"
         # lzma compression for your ramdisk
-	#export FOX_USE_LZMA_COMPRESSION="1"
+	export FOX_USE_LZMA_COMPRESSION="1"
 	# Bash Support
 	export FOX_USE_BASH_SHELL="1"
         export FOX_ASH_IS_BASH="1"
