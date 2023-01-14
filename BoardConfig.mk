@@ -69,7 +69,7 @@ TARGET_KERNEL_ARCH := $(TARGET_ARCH)
 TARGET_KERNEL_HEADER_ARCH := $(TARGET_ARCH)
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_SECOND_OFFSET := 0x00f00000
-BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/dtbhtool/mkbootimg.mk
+BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_PATH)/bootimg.mk
 #BOARD_KERNEL_CMDLINE := # Exynos doesn't take cmdline arguments from boot image
 #BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive androidboot.selinux=permissive
 
