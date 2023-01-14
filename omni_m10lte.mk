@@ -17,15 +17,15 @@
 # Inherit from the Device Tree itself.
 $(call inherit-product, device/samsung/m10lte/device.mk)
 
-# Inherit from TWRP-common Stuff.
-$(call inherit-product, vendor/twrp/config/common.mk)
+# Inherit from Omni-common Stuff.
+$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := m10lte
-PRODUCT_NAME := twrp_m10lte
+PRODUCT_NAME := omni_m10lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-M105F
 PRODUCT_MANUFACTURER := samsung
