@@ -14,12 +14,11 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/samsung/m10lte
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/twrp_m10lte.mk
+    $(LOCAL_DIR)/omni_m10lte.mk
 
 COMMON_LUNCH_CHOICES := \
-    twrp_m10lte-eng
+    omni_m10lte-eng
