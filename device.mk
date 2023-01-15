@@ -20,8 +20,8 @@ LOCAL_PATH := device/samsung/m10lte
 PRODUCT_SHIPPING_API_LEVEL := 27
 
 # Qcom common decryption
-PRODUCT_PACKAGES += \
-    qcom_decrypt
+#PRODUCT_PACKAGES += \
+#   qcom_decrypt
 
 # fastboot/d hal
 PRODUCT_PACKAGES += \
