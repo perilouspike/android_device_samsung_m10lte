@@ -16,18 +16,6 @@
 
 LOCAL_PATH := device/samsung/m10lte
 
-# Api
-PRODUCT_SHIPPING_API_LEVEL := 27
-
-# Qcom common decryption
-#PRODUCT_PACKAGES += \
-#   qcom_decrypt
-
-# fastboot/d hal
-PRODUCT_PACKAGES += \
-    android.hardware.fastboot@1.0-impl-mock \
-    fastbootd
-
 PRODUCT_PACKAGES += \
     tzdata_twrp
 
