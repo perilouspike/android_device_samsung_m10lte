@@ -3,6 +3,8 @@
 # 	Copyright (C) 2019-2021 The OrangeFox Recovery Project
 #
 
+add_lunch_combo omni_m10lte-eng
+
 FDEVICE="m10lte"
 #set -o xtrace
 
