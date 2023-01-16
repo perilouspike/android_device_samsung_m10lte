@@ -20,8 +20,10 @@ $(call inherit-product, device/samsung/m10lte/device.mk)
 $(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 
 # Device identifier. This must come after all inclusions
