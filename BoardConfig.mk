@@ -68,7 +68,6 @@ TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_USE_TOOLBOX := true
 LZMA_RAMDISK_TARGETS := recovery
-TARGET_USES_MKE2FS := true
 
 # Additional flags
 TARGET_OTA_ASSERT_DEVICE := m10lte,m10ltecis,m10ltexx,m10lteub,m10lteins,m10ltedtvvj,m10ltekx,m10ltedd,m10f
