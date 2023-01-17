@@ -40,7 +40,7 @@ OVERRIDE_TARGET_FLATTEN_APEX := true
 TARGET_USES_64_BIT_BINDER := true
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := m10lte,m10ltecis,m10ltexx,m10lteub,m10lteins,m10ltedtvvj,m10ltekx,m10ltedx,m10ltedd,m10f
+TARGET_OTA_ASSERT_DEVICE := "m10lte,m10ltedd,m10ltedx,SM-M105F,m10f,m10g,m10m"
 
 # Bootloader
 TARGET_SOC := $(TARGET_BOOTLOADER_BOARD_NAME)
