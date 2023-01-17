@@ -22,6 +22,7 @@
 /cpefs            ext4           /dev/block/platform/13540000.dwmmc0/by-name/CPEFS                                flags=subpartitionof=/efs;backup=1
 
 # Internal storage
+/data		          f2fs	         /dev/block/platform/13540000.dwmmc0/by-name/USERDATA                             flags=display="Data";encryptable=footer;length=-20480
 /storage          ext4           /data/media/0                                                                    flags=display="Internal Storage";backup=1;removable;usermrf;fsflags="bind,utf8"
 
 # SD Card & USB-OTG Points
