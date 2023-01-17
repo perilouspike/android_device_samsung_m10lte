@@ -4,7 +4,7 @@
 
 # <src>	                                                 <mnt_point>	    <type>		  <mnt_flags and options>											                                                               	<fs_mgr_flags>
 
-/dev/block/platform/13540000.dwmmc0/by-name/USERDATA     /data	           f2fs	       noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678	          wait,check,forceencrypt=footer,quota,reservedsize=128M,length=-20480
+/dev/block/platform/13540000.dwmmc0/by-name/USERDATA     /data	           f2fs	       noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678	          wait,check,encryptable=footer;length=-20480,reservedsize=128M
 /dev/block/platform/13540000.dwmmc0/by-name/MISC	       /misc	           emmc        defaults                                                                                                     defaults
 
 #
