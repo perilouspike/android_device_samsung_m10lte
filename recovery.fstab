@@ -1,56 +1,10 @@
-# Copyright (c) 2011, Code Aurora Forum. All rights reserved.
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+
+# <src>	                                                 <mnt_point>	    <type>		  <mnt_flags and options>											                                                               	<fs_mgr_flags>
+
+/dev/block/platform/13540000.dwmmc0/by-name/USERDATA     /data	           f2fs	       noatime,nosuid,nodev,discard,usrquota,grpquota,fsync_mode=nobarrier,reserve_root=32768,resgid=5678	          wait,check,forceencrypt=footer,quota,reservedsize=128M,length=-20480
+/dev/block/platform/13540000.dwmmc0/by-name/MISC	       /misc	           emmc        defaults                                                                                                     defaults
+
 #
-# Redistribution and use in source and binary forms, with or without
-# modification, are permitted provided that the following conditions are
-# met:
-#     * Redistributions of source code must retain the above copyright
-#       notice, this list of conditions and the following disclaimer.
-#     * Redistributions in binary form must reproduce the above
-#       copyright notice, this list of conditions and the following
-#       disclaimer in the documentation and/or other materials provided
-#       with the distribution.
-#     * Neither the name of Code Aurora Forum, Inc. nor the names of its
-#       contributors may be used to endorse or promote products derived
-#       from this software without specific prior written permission.
-#
-# THIS SOFTWARE IS PROVIDED "AS IS" AND ANY EXPRESS OR IMPLIED
-# WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
-# MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT
-# ARE DISCLAIMED.  IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS
-# BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-# CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-# SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR
-# BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY,
-# WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE
-# OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
-# IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-#
-
-#<mount_point>   <fstype>        <device>                          <device2>              	                     <flags>
-
-# Logical Points
-/system           ext4           /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM                               flags=display="System";backup=1;flashimg=1;recoveryonly
-/vendor           ext4           /dev/block/platform/13540000.dwmmc0/by-name/VENDOR                               flags=display="Vendor";backup=1;wipeingui;flashimg=1;recoveryonly
-/odm              ext4           /dev/block/platform/13540000.dwmmc0/by-name/ODM                                  flags=display="ODM";backup=1;recoveryonly
-
-# Data
-/data	          f2fs          /dev/block/platform/13540000.dwmmc0/by-name/USERDATA	 	                   	  flags=display="Data";encryptable=footer;length=-20480;wait
-
-# Other mount points
-/boot             emmc           /dev/block/platform/13540000.dwmmc0/by-name/BOOT                                 flags=display="Boot";backup=1;flashimg=1;recoveryonly
-/recovery         emmc           /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY                             flags=display="Recovery";backup=1;flashimg=1;recoveryonly
-/cache            ext4           /dev/block/platform/13540000.dwmmc0/by-name/CACHE                                flags=display="Cache";wipeingui;recoveryonly
-/misc             emmc           /dev/block/platform/13540000.dwmmc0/by-name/MISC                                 flags=display="Misc";backup=1;recoveryonly
-/preload          ext4           /dev/block/platform/13540000.dwmmc0/by-name/HIDDEN                               flags=display="Preload";backup=1;recoveryonly
-
-# Modem/EFS Mount Point (Combo)
-/efs              ext4           /dev/block/platform/13540000.dwmmc0/by-name/EFS                                  flags=display="EFS";backup=1;recoveryonly
-/modem            emmc           /dev/block/platform/13540000.dwmmc0/by-name/RADIO                                flags=subpartitionof=/efs;backup=1;recoveryonly
-/cpefs            ext4           /dev/block/platform/13540000.dwmmc0/by-name/CPEFS                                flags=subpartitionof=/efs;backup=1;recoveryonly
-
-# Internal storage
-/storage          ext4           /data/media/0                                                                    flags=display="Internal Storage";backup=1;removable;usermrf;fsflags="bind,utf8"
-
-# SD Card & USB-OTG Points
-/sdcard           vfat           /dev/block/mmcblk1p1               /dev/block/mmcblk1                            flags=display="Micro SD";storage;wipeingui;removable;fsflags="bind,utf8";recoveryonly
-/usb-otg	      auto	         /dev/block/sda1                    /dev/block/sda                                flags=display="USB Storage";storage;wipeingui;removable;fsflags="utf8"
