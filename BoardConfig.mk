@@ -122,7 +122,7 @@ TW_INCLUDE_FBE := true
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 LZMA_RAMDISK_TARGETS := recovery # LZMA support
-#TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
 
@@ -157,8 +157,8 @@ TW_DEVICE_VERSION := perilouspike
 
 # Set brightness path and level
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
-TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 162
+TW_MAX_BRIGHTNESS := 200
+TW_DEFAULT_BRIGHTNESS := 135
 
 # Use Toolbox instead of Busybox
 TW_USE_TOOLBOX := true
@@ -170,7 +170,7 @@ TARGET_USES_LOGD := true
 # Statusbar icons flags
 #TW_STATUS_ICONS_ALIGN := center
 TW_CUSTOM_CPU_POS := 400
-TW_CUSTOM_CLOCK_POS := 200
+TW_CUSTOM_CLOCK_POS := 75
 TW_CUSTOM_BATTERY_POS := 800
 
 # exFAT/NTFS file system Support
