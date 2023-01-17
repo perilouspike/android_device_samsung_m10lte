@@ -16,9 +16,19 @@
 
 LOCAL_PATH := device/samsung/m10lte
 
+# Api
+PRODUCT_SHIPPING_API_LEVEL := 27
+
+# fastboot/d hal
+PRODUCT_PACKAGES += \
+    android.hardware.fastboot@1.0-impl-mock \
+    fastbootd
+
 PRODUCT_PACKAGES += \
     tzdata_twrp
 
 PRODUCT_PACKAGES += \
 	charger_res_images \
 	charger
+	
+#
