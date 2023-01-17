@@ -1,0 +1,27 @@
+# Android fstab file.
+# The filesystem that contains the filesystem checker binary (typically /system) cannot
+# specify MF_CHECK, and must come before any filesystems that do specify MF_CHECK
+#
+# mount_point     fstype         device                             device2                                       flags
+
+# Logical
+/system_image     emmc           /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM		                            flags=display="System Image";backup=1;flashimg=1
+/vendor_image     emmc           /dev/block/platform/13540000.dwmmc0/by-name/VENDOR                              	flags=display="Vendor image";backup=1;flashimg=1
+
+# Other mount points
+/boot             emmc           /dev/block/platform/13540000.dwmmc0/by-name/BOOT                                 flags=display="Boot";backup=1;flashimg=1
+/recovery         emmc           /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY                             flags=display="Recovery";backup=1;flashimg=1
+/cache            ext4           /dev/block/platform/13540000.dwmmc0/by-name/CACHE                                flags=display="Cache";wipeingui
+/preload          ext4           /dev/block/platform/13540000.dwmmc0/by-name/HIDDEN                               flags=display="Preload";backup=1
+
+# Modem/EFS Mount Point (Combo)
+/efs              ext4           /dev/block/platform/13540000.dwmmc0/by-name/EFS                                  flags=display="EFS";backup=1
+/modem            emmc           /dev/block/platform/13540000.dwmmc0/by-name/RADIO                                flags=subpartitionof=/efs;backup=1
+/cpefs            ext4           /dev/block/platform/13540000.dwmmc0/by-name/CPEFS                                flags=subpartitionof=/efs;backup=1
+
+# Internal storage
+/storage          ext4           /data/media/0                                                                    flags=display="Internal Storage";backup=1;removable;usermrf;fsflags="bind,utf8"
+
+# SD Card & USB-OTG Points
+/sdcard1          vfat           /dev/block/mmcblk1p1               /dev/block/mmcblk1                            flags=display="Micro SD";storage;wipeingui;removable;fsflags="bind,utf8"
+/usb-otg	        vfat	         /dev/block/sda1                    /dev/block/sda                                flags=display="USB Storage";storage;wipeingui;removable;fsflags="utf8"
