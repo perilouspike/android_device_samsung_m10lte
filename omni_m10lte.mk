@@ -25,7 +25,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 
 # Inherit from Omni-common Stuff.
 $(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+#$(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Inherit from the Device Tree itself.
 $(call inherit-product, device/samsung/m10lte/device.mk)
