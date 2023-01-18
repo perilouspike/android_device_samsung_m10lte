@@ -156,9 +156,9 @@ TW_HAS_DOWNLOAD_MODE := true
 TW_DEVICE_VERSION := perilouspike
 
 # Include some binaries
-TW_INCLUDE_LIBRESETPROP := true
+#TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
-TW_INCLUDE_RESETPROP := true
+#TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_BASH := true
 
 # Set brightness path and level
