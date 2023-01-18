@@ -125,9 +125,6 @@ LZMA_RAMDISK_TARGETS := recovery # LZMA support
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 TARGET_SYSTEM_PROP := $(DEVICE_PATH)/system.prop
-
-# System as root
-BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
 BOARD_SUPPRESS_SECURE_ERASE := true
 
 # Android Verified Boot
@@ -142,20 +139,27 @@ PLATFORM_VERSION := 16.1.0
 PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 
 # TWRP Configuration
+RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
-TW_EXCLUDE_DEFAULT_USB_INIT := true
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/13600000.usb/13600000.dwc3/gadget/lun0/file"
+#TW_EXCLUDE_DEFAULT_USB_INIT := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_INCLUDE_NTFS_3G := true
-TW_INCLUDE_FASTBOOTD := true
 TW_USE_NEW_MINADBD := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 
 # Maintainer/Version
 TW_DEVICE_VERSION := perilouspike
+
+# Include some binaries
+TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_REPACKTOOLS := true
+TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_BASH := true
 
 # Set brightness path and level
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
