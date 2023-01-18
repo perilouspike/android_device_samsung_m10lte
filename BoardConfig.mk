@@ -117,7 +117,6 @@ TARGET_COPY_OUT_VENDOR := vendor
 TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
-TARGET_CRYPTFS_HW_PATH := vendor/qcom/opensource/commonsys/cryptfs_hw
 TARGET_HW_DISK_ENCRYPTION := true
 
 # Recovery
