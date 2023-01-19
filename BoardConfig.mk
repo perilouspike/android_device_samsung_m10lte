@@ -114,7 +114,6 @@ BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
 TARGET_COPY_OUT_VENDOR := vendor
 
 # Crypto
-TW_INCLUDE_FBE := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
 TW_CRYPTO_USE_SYSTEM_VOLD := true
@@ -153,7 +152,7 @@ TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_INCLUDE_NTFS_3G := true
-#TW_USE_NEW_MINADBD := true
+TW_USE_NEW_MINADBD := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 #TW_MTP_DEVICE := /dev/usb_mtp_gadget
@@ -164,8 +163,8 @@ TW_DEVICE_VERSION := perilouspike
 
 # Include some binaries
 #TW_INCLUDE_LIBRESETPROP := true
-#TW_INCLUDE_REPACKTOOLS := true
-#TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_REPACKTOOLS := true
+TW_INCLUDE_RESETPROP := true
 #TW_INCLUDE_BASH := true
 
 # Set brightness path and level
