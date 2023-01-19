@@ -142,25 +142,25 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 #TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/devices/13600000.usb/13600000.dwc3/gadget/lun0/file"
-#TW_EXCLUDE_DEFAULT_USB_INIT := true
+TW_EXCLUDE_DEFAULT_USB_INIT := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_INCLUDE_NTFS_3G := true
-TW_USE_NEW_MINADBD := true
+#TW_USE_NEW_MINADBD := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
-TW_MTP_DEVICE := /dev/usb_mtp_gadget
+#TW_MTP_DEVICE := /dev/usb_mtp_gadget
 
 # Maintainer/Version
 TW_DEVICE_VERSION := perilouspike
 
 # Include some binaries
 #TW_INCLUDE_LIBRESETPROP := true
-TW_INCLUDE_REPACKTOOLS := true
+#TW_INCLUDE_REPACKTOOLS := true
 #TW_INCLUDE_RESETPROP := true
-TW_INCLUDE_BASH := true
+#TW_INCLUDE_BASH := true
 
 # Set brightness path and level
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
@@ -181,7 +181,7 @@ TW_CUSTOM_CLOCK_POS := 10
 TW_CUSTOM_BATTERY_POS := 40
 
 # MKE2FS support (needed for PRODUCT_SHIPPING_API_LEVEL var)
-TARGET_USES_MKE2FS := true
+#TARGET_USES_MKE2FS := true
 
 # exFAT/NTFS file system Support
 TW_INCLUDE_FUSE_EXFAT := true
