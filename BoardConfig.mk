@@ -146,6 +146,7 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/kernel/config/usb_gadget/g1/functions/mass_storage.0/lun.%d/file"
+TARGET_RECOVERY_INITRC := device/samsung/m10lte/recovery/root/init.rc
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_EXTRA_LANGUAGES := true
