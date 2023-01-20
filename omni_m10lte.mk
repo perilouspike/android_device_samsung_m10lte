@@ -14,24 +14,33 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit 64bit support
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+
+# Not available in android-10.0+ source
+$(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
+
+# Inherit Telephony packages
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+
+# Inherit language packages
+$(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Otherwise, If you have 32-bit device, add the below line instead of above line
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
 
-# Inherit from Omni-common Stuff.
+# Inherit from Omni-common Stuffs.
 $(call inherit-product, vendor/omni/config/common.mk)
-#$(call inherit-product, vendor/omni/config/gsm.mk)
+$(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Inherit from the Device Tree itself.
 $(call inherit-product, device/samsung/m10lte/device.mk)
 
-PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/dt.img:boot.img
+#PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/dt.img:boot.img
 
 # Device identifier. This must come after all inclusions
 PRODUCT_RELEASE_NAME := m10lte
