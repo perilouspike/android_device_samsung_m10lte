@@ -18,14 +18,14 @@
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 
 # Inherit 64bit support
-$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
 # Not available in android-10.0+ source
 $(call inherit-product, $(SRC_TARGET_DIR)/product/embedded.mk)
 
 # Inherit Telephony packages
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # Inherit language packages
 $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
@@ -35,7 +35,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Inherit from Omni-common Stuffs.
 $(call inherit-product, vendor/omni/config/common.mk)
-$(call inherit-product, vendor/omni/config/gsm.mk)
+#$(call inherit-product, vendor/omni/config/gsm.mk)
 
 # Inherit from the Device Tree itself.
 $(call inherit-product, device/samsung/m10lte/device.mk)
