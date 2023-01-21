@@ -72,7 +72,7 @@ BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_SECOND_OFFSET := 0x00f00000
 BOARD_KERNEL_IMAGE_NAME := Image
 #BOARD_KERNEL_SEPARATED_DT := true
-#BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive androidboot.selinux=permissive
 
 # Args
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
