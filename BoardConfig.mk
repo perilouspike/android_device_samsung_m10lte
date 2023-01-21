@@ -145,7 +145,7 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 # TWRP Configuration
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
-TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
+#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun0/file"
 #TARGET_RECOVERY_INITRC := device/samsung/m10lte/recovery/root/init.rc
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 RECOVERY_SDCARD_ON_DATA := true
@@ -156,8 +156,8 @@ TW_INCLUDE_NTFS_3G := true
 TW_USE_NEW_MINADBD := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
-TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
-TW_HAS_MTP := true
+#TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
+#TW_HAS_MTP := true
 
 # Maintainer/Version
 TW_DEVICE_VERSION := perilouspike
@@ -177,8 +177,8 @@ TW_DEFAULT_BRIGHTNESS := 135
 TW_USE_TOOLBOX := true
 
 # Debug-tools
-#TWRP_INCLUDE_LOGCAT := true
-#TARGET_USES_LOGD := true
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
 
 # Statusbar icons flags
 #TW_STATUS_ICONS_ALIGN := center
@@ -187,14 +187,14 @@ TW_USE_TOOLBOX := true
 #TW_CUSTOM_BATTERY_POS := 40
 
 # MKE2FS support (needed for PRODUCT_SHIPPING_API_LEVEL var)
-#TARGET_USES_MKE2FS := true
+TARGET_USES_MKE2FS := true
 
 # exFAT/NTFS file system Support
 TW_INCLUDE_FUSE_EXFAT := true
 TW_INCLUDE_FUSE_NTFS := true
 
 # deal with "error: overriding commands for target" problems
-#BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_DUP_RULES := true
 #BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 #
