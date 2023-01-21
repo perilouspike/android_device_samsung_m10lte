@@ -145,8 +145,8 @@ PLATFORM_VERSION_LAST_STABLE := $(PLATFORM_VERSION)
 # TWRP Configuration
 RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
-#TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/f_mass_storage/lun/file"
-TARGET_RECOVERY_INITRC := device/samsung/m10lte/recovery/root/init.rc
+TARGET_USE_CUSTOM_LUN_FILE_PATH := "/sys/class/android_usb/android0/f_mass_storage/lun/file"
+#TARGET_RECOVERY_INITRC := device/samsung/m10lte/recovery/root/init.rc
 TW_EXCLUDE_DEFAULT_USB_INIT := true
 RECOVERY_SDCARD_ON_DATA := true
 TW_EXTRA_LANGUAGES := true
@@ -157,7 +157,7 @@ TW_USE_NEW_MINADBD := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
 TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
-#TW_HAS_MTP := true
+TW_HAS_MTP := true
 
 # Maintainer/Version
 TW_DEVICE_VERSION := perilouspike
