@@ -156,7 +156,7 @@ TW_INCLUDE_NTFS_3G := true
 TW_USE_NEW_MINADBD := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
-#TW_MTP_DEVICE := /dev/usb_mtp_gadget
+TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
 #TW_HAS_MTP := true
 
 # Maintainer/Version
