@@ -1,0 +1,8 @@
+ro.hardware=samsungexynos7870
+ro.arch=exynos7870
+ro.chipname=exynos7870
+ro.product.brand=samsung
+ro.product.name=m10lte
+ro.product.device=m10lte
+ro.build.product=m10lte
+ro.treble.enabled=true
