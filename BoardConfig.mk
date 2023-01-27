@@ -35,7 +35,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 TARGET_2ND_CPU_VARIANT_RUNTIME := cortex-a53
 
 # APEX
-#OVERRIDE_TARGET_FLATTEN_APEX := true
+OVERRIDE_TARGET_FLATTEN_APEX := true
 
 TARGET_USES_64_BIT_BINDER := true
 
@@ -71,8 +71,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_SECOND_OFFSET := 0x00f00000
 BOARD_KERNEL_IMAGE_NAME := Image
-#BOARD_KERNEL_SEPARATED_DT := true
-BOARD_KERNEL_CMDLINE := androidboot.selinux=permissive androidboot.selinux=permissive
+BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive androidboot.selinux=permissive
 
 # Args
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
@@ -116,6 +115,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 # Crypto
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_CRYPTO_FBE := true
+TW_INCLUDE_FBE := true
 TW_CRYPTO_USE_SYSTEM_VOLD := true
 
 # Recovery
@@ -153,25 +153,25 @@ TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_INCLUDE_NTFS_3G := true
-#TW_USE_NEW_MINADBD := true
+TW_USE_NEW_MINADBD := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
-#TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
-#TW_HAS_MTP := true
+TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
+TW_HAS_MTP := true
 
 # Maintainer/Version
 TW_DEVICE_VERSION := perilouspike
 
 # Include some binaries
-#TW_INCLUDE_LIBRESETPROP := true
+TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
-#TW_INCLUDE_RESETPROP := true
+TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_BASH := true
 
 # Set brightness path and level
 TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 255
-TW_DEFAULT_BRIGHTNESS := 130
+TW_DEFAULT_BRIGHTNESS := 150
 
 # Use Toolbox instead of Busybox
 TW_USE_TOOLBOX := true
