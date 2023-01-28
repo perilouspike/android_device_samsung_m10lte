@@ -1,0 +1,12 @@
+on init
+    setprop sys.usb.configfs 1
+
+on fs
+    wait /dev/block/platform/13540000.dwmmc0
+     symlink /dev/block/platform/13540000.dwmmc0 /dev/block/by-name
+     
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/BOOT /dev/block/by-name/BOOT
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/RECOVERY /dev/block/by-name/RECOVERY
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM /dev/block/by-name/SYSTEM
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/VENDOR /dev/block/by-name/VENDOR
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/CACHE /dev/block/by-name/CACHE
