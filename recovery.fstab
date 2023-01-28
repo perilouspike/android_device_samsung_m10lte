@@ -5,10 +5,10 @@
 # mount_point     fstype         device                             device2                                       flags
 
 # Logical
-/system	          ext4	         /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM                               flags=display="System";backup=1
-/system_image     emmc           /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM		                            flags=display="System_image";backup=1;flashimg=1
-/vendor		        ext4	         /dev/block/platform/13540000.dwmmc0/by-name/VENDOR                               flags=display="Vendor";backup=1;wipeingui
-/vendor_image     emmc           /dev/block/platform/13540000.dwmmc0/by-name/VENDOR  	                            flags=display="Vendor_image";backup=1;flashimg=1
+/system	          ext4	         /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM                               flags=display="System";backup=1;flashimg=1
+#/system_image     emmc           /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM		                            flags=display="System_image";backup=1;flashimg=1
+/vendor		        ext4	         /dev/block/platform/13540000.dwmmc0/by-name/VENDOR                               flags=display="Vendor";backup=1;wipeingui;flashimg=1
+#/vendor_image     emmc           /dev/block/platform/13540000.dwmmc0/by-name/VENDOR  	                            flags=display="Vendor_image";backup=1;flashimg=1
 /cache            ext4           /dev/block/platform/13540000.dwmmc0/by-name/CACHE                                flags=display="Cache";wipeingui
 /odm              ext4           /dev/block/platform/13540000.dwmmc0/by-name/ODM                                  flags=display="ODM";backup=1
 
@@ -22,8 +22,7 @@
 /modem            emmc           /dev/block/platform/13540000.dwmmc0/by-name/RADIO                                flags=display="Modem";backup=1
 
 # Internal storage
-/data             ext4	         /dev/block/platform/13540000.dwmmc0/by-name/USERDATA				                      flags=display="Data";encryptable=footer;length=-20480
-/storage          ext4           /data/media/0                                                                    flags=display="Internal Storage";backup=1;removable;usermrf;fsflags="bind"
+/data             f2fs	         /dev/block/platform/13540000.dwmmc0/by-name/USERDATA				                      flags=display="Data";encryptable=footer;length=-20480
 
 # SD Card & USB-OTG Points
 /sdcard1          auto           /dev/block/mmcblk1p1               /dev/block/mmcblk1                            flags=display="Micro SD";storage;wipeingui;removable
