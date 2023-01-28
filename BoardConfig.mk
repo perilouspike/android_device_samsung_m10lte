@@ -153,19 +153,19 @@ TW_EXTRA_LANGUAGES := true
 TW_SCREEN_BLANK_ON_BOOT := true
 TW_INPUT_BLACKLIST := "hbtp_vm"
 TW_INCLUDE_NTFS_3G := true
-TW_USE_NEW_MINADBD := true
+#TW_USE_NEW_MINADBD := true
 TW_NO_REBOOT_BOOTLOADER := true
 TW_HAS_DOWNLOAD_MODE := true
-TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
-TW_HAS_MTP := true
+#TW_MTP_DEVICE := "/dev/usb_mtp_gadget"
+#TW_HAS_MTP := true
 
 # Maintainer/Version
 TW_DEVICE_VERSION := perilouspike
 
 # Include some binaries
-TW_INCLUDE_LIBRESETPROP := true
+#TW_INCLUDE_LIBRESETPROP := true
 TW_INCLUDE_REPACKTOOLS := true
-TW_INCLUDE_RESETPROP := true
+#TW_INCLUDE_RESETPROP := true
 TW_INCLUDE_BASH := true
 
 # Set brightness path and level
