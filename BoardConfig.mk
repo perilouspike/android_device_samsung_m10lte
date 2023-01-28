@@ -197,4 +197,5 @@ TW_INCLUDE_FUSE_NTFS := true
 BUILD_BROKEN_DUP_RULES := true
 BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
-#
+# SHRP Configuration
+include $(DEVICE_PATH)/configs/SHRPConfig.mk
