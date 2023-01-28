@@ -16,20 +16,20 @@ sys.usb.controller=13600000.dwc3
 persist.sys.usb.config=mtp,adb
 
 # Encryption
-ro.adb.secure=0
+#ro.adb.secure=0
 
 # Crypto
-ro.crypto.fde_algorithm=AES-256-XTS-DISK
-ro.crypto.fs_crypto_blkdev=/dev/block/dm-3
-ro.crypto.fuse_sdcard=true
-ro.crypto.state=encrypted
-ro.crypto.type=block
+#ro.crypto.fde_algorithm=AES-256-XTS-DISK
+#ro.crypto.fs_crypto_blkdev=/dev/block/dm-3
+#ro.crypto.fuse_sdcard=true
+#ro.crypto.state=encrypted
+#ro.crypto.type=block
 
 # Gatekeeper/Keymaster
-init.svc.gatekeeperd=running
-init.svc.vendor.gatekeeper-1-0=running
-ro.boottime.gatekeeperd=9512282454
-ro.boottime.vendor.gatekeeper-1-0=7273215648
-init.svc.vendor.keymaster-3-0=running
-ro.boottime.vendor.keymaster-3-0=6421581880
+#init.svc.gatekeeperd=running
+#init.svc.vendor.gatekeeper-1-0=running
+#ro.boottime.gatekeeperd=9512282454
+#ro.boottime.vendor.gatekeeper-1-0=7273215648
+#init.svc.vendor.keymaster-3-0=running
+#ro.boottime.vendor.keymaster-3-0=6421581880
 
