@@ -22,7 +22,7 @@
 /modem            emmc           /dev/block/platform/13540000.dwmmc0/by-name/RADIO                                flags=display="Modem";backup=1
 
 # Internal storage
-/data             f2fs	         /dev/block/platform/13540000.dwmmc0/by-name/USERDATA				                      flags=display="Data";encryptable=footer;length=-20480
+/data             ext4	         /dev/block/platform/13540000.dwmmc0/by-name/USERDATA				                      flags=display="Data";encryptable=footer;length=-20480
 
 # SD Card & USB-OTG Points
 /sdcard1          auto           /dev/block/mmcblk1p1               /dev/block/mmcblk1                            flags=display="Micro SD";storage;wipeingui;removable
