@@ -71,7 +71,7 @@ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
 BOARD_KERNEL_OFFSET := 0x00008000
 BOARD_KERNEL_SECOND_OFFSET := 0x00f00000
 BOARD_KERNEL_IMAGE_NAME := Image
-BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive androidboot.selinux=permissive
+#BOARD_KERNEL_CMDLINE += androidboot.selinux=permissive androidboot.selinux=permissive
 
 # Args
 BOARD_MKBOOTIMG_ARGS += --ramdisk_offset $(BOARD_RAMDISK_OFFSET)
@@ -123,8 +123,8 @@ TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 LZMA_RAMDISK_TARGETS := recovery # LZMA support
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
-TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
+#TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
+#TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # System as root
 #BOARD_BUILD_SYSTEM_ROOT_IMAGE := true
