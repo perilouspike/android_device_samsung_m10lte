@@ -1,0 +1,12 @@
+on init
+    setprop sys.usb.configfs 1
+
+on fs
+    wait /dev/block/platform/13540000.dwmmc0
+    symlink /dev/block/platform/13540000.dwmmc0 /dev/block/mapper
+    
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/SYSTEM /dev/block/mapper/system
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/VENDOR /dev/block/mapper/vendor
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/ODM /dev/block/mapper/odm
+    symlink /dev/block/platform/13540000.dwmmc0/by-name/USERDATA /dev/block/mapper/userdata
+    
