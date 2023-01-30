@@ -13,6 +13,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Inherit from the Device Tree itself.
+$(call inherit-product, device/samsung/m10lte/device.mk)
+
+# Inherit from TWRP-common Stuff, if building TWRP.
+$(call inherit-product-if-exists, vendor/omni/config/common.mk)
+$(call inherit-product-if-exists, vendor/omni/config/gsm.mk)
+
+# Inherit from PBRP-common stuff, if building PBRP.
+$(call inherit-product-if-exists, vendor/pb/config/common.mk)
+$(call inherit-product-if-exists, vendor/pb/config/gsm.mk)
+
 # Inherit from those products. Most specific first.
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/base.mk)
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
@@ -32,14 +43,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 
 # Otherwise, If you have 32-bit device, add the below line instead of above line
 #$(call inherit-product, $(SRC_TARGET_DIR)/product/core_minimal.mk)
-
-# Inherit from Omni-common Stuffs.
-$(call inherit-product, vendor/omni/config/common.mk)
-#$(call inherit-product, vendor/omni/config/gsm.mk)
-
-# Inherit from the Device Tree itself.
-$(call inherit-product, device/samsung/m10lte/device.mk)
-
 #PRODUCT_COPY_FILES += $(LOCAL_PATH)/prebuilt/dt.img:boot.img
 
 # Device identifier. This must come after all inclusions
