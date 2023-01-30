@@ -180,11 +180,13 @@ TW_USE_TOOLBOX := true
 TWRP_INCLUDE_LOGCAT := true
 TARGET_USES_LOGD := true
 
-# Statusbar icons flags
+# Statusbar/notchbar adjustments
 #TW_STATUS_ICONS_ALIGN := center
 #TW_CUSTOM_CPU_POS := 20
 #TW_CUSTOM_CLOCK_POS := 10
 #TW_CUSTOM_BATTERY_POS := 40
+TW_Y_OFFSET := 80
+TW_H_OFFSET := -80
 
 # MKE2FS support (needed for PRODUCT_SHIPPING_API_LEVEL var)
 TARGET_USES_MKE2FS := true
@@ -199,3 +201,6 @@ BUILD_BROKEN_MISSING_REQUIRED_MODULES := true
 
 # SHRP Configuration
 include $(DEVICE_PATH)/configs/SHRPConfig.mk
+
+# PBRP Configuration
+PB_TORCH_PATH := /sys/class/camera/flash/rear_torch_flash
